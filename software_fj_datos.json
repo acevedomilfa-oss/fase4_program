@@ -1,56 +1,62 @@
 {
-  "clientes": [
-    {
-      "id": 1,
-      "nombre": "dana garcia",
-      "correo": "dana@gmail.com",
-      "telefono": "3124567079"
-    },
-    {
-      "id": 2,
-      "nombre": "alejandra dadario",
-      "correo": "alejandra@gmail.com",
-      "telefono": "3002345667"
-    },
-    {
-      "id": 3,
-      "nombre": "jessica alba",
-      "correo": "jessica@gmail.com",
-      "telefono": "3002345670"
-    }
-  ],
   "servicios": [
     {
       "id": 1,
-      "nombre": "Reserva de sala de reuniones",
-      "categoria": "Salas",
-      "precio": 250.0
+      "nombre": "Reserva de salas",
+      "precio": 125.0,
+      "tipo": "sala",
+      "activo": true
     },
     {
       "id": 2,
       "nombre": "Alquiler de equipos",
-      "categoria": "Equipos",
-      "precio": 300.0
+      "precio": 500.0,
+      "tipo": "equipos",
+      "activo": true
     },
     {
       "id": 3,
-      "nombre": "Asesoria especializada",
-      "categoria": "Asesorias",
-      "precio": 500.0
+      "nombre": "Asesorias especializadas",
+      "precio": 1000.0,
+      "tipo": "asesoria",
+      "activo": true
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "danna garcia",
+      "correo": "danna@gmail.com",
+      "telefono": "3001234560",
+      "activo": true
+    },
+    {
+      "id": 2,
+      "nombre": "natalia jerez",
+      "correo": "natalia@gmail.com",
+      "telefono": "3125007080",
+      "activo": false
+    },
+    {
+      "id": 3,
+      "nombre": "roxanna lopez",
+      "correo": "roxanna@gmail.com",
+      "telefono": "3123459090",
+      "activo": true
     },
     {
       "id": 4,
-      "nombre": "alquiler de sillas",
-      "categoria": "salas",
-      "precio": 100.0,
-      "activo": false
+      "nombre": "jessica alba",
+      "correo": "jessica@gmail.com",
+      "telefono": "3104567890",
+      "activo": true
     },
     {
       "id": 5,
-      "nombre": "Asesoria especializada",
-      "categoria": "Asesorias",
-      "precio": 200.0,
-      "activo": false
+      "nombre": "Sandra lopez",
+      "correo": "sandra@gmail.com",
+      "telefono": "3001234560",
+      "activo": true
     }
   ],
   "reservas": [
@@ -58,25 +64,150 @@
       "id": 1,
       "cliente_id": 1,
       "servicio_id": 1,
-      "fecha": "2026-12-10",
-      "hora": "13:00",
-      "estado": "Activa"
+      "fecha": "2025-12-30",
+      "hora": "2:30",
+      "estado": "Cancelada",
+      "parametros": {
+        "horas": 10
+      },
+      "costo": 1250.0
     },
     {
       "id": 2,
-      "cliente_id": 2,
-      "servicio_id": 3,
-      "fecha": "2026-12-01",
-      "hora": "06:00",
-      "estado": "Activa"
+      "cliente_id": 3,
+      "servicio_id": 2,
+      "fecha": "2026-12-12",
+      "hora": "12:30",
+      "estado": "Activa",
+      "parametros": {
+        "cantidad": 10
+      },
+      "costo": 5000.0
     },
     {
       "id": 3,
+      "cliente_id": 4,
+      "servicio_id": 3,
+      "fecha": "2026-12-7",
+      "hora": "13:30",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 4.0
+      },
+      "costo": 2400.0
+    },
+    {
+      "id": 4,
+      "cliente_id": 3,
+      "servicio_id": 3,
+      "fecha": "2026-12-23",
+      "hora": "14:00",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 8.0
+      },
+      "costo": 4800.0
+    },
+    {
+      "id": 5,
       "cliente_id": 3,
       "servicio_id": 1,
-      "fecha": "2026-11-30",
-      "hora": "8:00",
-      "estado": "Activa"
+      "fecha": "2026-12-23",
+      "hora": "4:00",
+      "estado": "Cancelada",
+      "parametros": {
+        "horas": 12
+      },
+      "costo": 1500.0
+    },
+    {
+      "id": 6,
+      "cliente_id": 3,
+      "servicio_id": 2,
+      "fecha": "2026-12-03",
+      "hora": "12:00",
+      "estado": "Activa",
+      "parametros": {
+        "cantidad": 50
+      },
+      "costo": 25000.0
+    },
+    {
+      "id": 7,
+      "cliente_id": 4,
+      "servicio_id": 3,
+      "fecha": "2026-10-2",
+      "hora": "10:00",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 8.0
+      },
+      "costo": 4800.0
+    },
+    {
+      "id": 8,
+      "cliente_id": 1,
+      "servicio_id": 1,
+      "fecha": "2026-12-12",
+      "hora": "3:00",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 24
+      },
+      "costo": 2400.0,
+      "descuento": 600.0
+    },
+    {
+      "id": 9,
+      "cliente_id": 3,
+      "servicio_id": 2,
+      "fecha": "2026-12-23",
+      "hora": "23:00",
+      "estado": "Activa",
+      "parametros": {
+        "cantidad": 60
+      },
+      "costo": 24000.0,
+      "descuento": 6000.0
+    },
+    {
+      "id": 10,
+      "cliente_id": 4,
+      "servicio_id": 3,
+      "fecha": "2026-12-23",
+      "hora": "12:00",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 8.0
+      },
+      "costo": 3840.0,
+      "descuento": 960.0
+    },
+    {
+      "id": 11,
+      "cliente_id": 3,
+      "servicio_id": 1,
+      "fecha": "2026-10-12",
+      "hora": "2:10",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 3
+      },
+      "costo": 375.0,
+      "descuento": 0.0
+    },
+    {
+      "id": 12,
+      "cliente_id": 5,
+      "servicio_id": 3,
+      "fecha": "2026-12-20",
+      "hora": "10:00",
+      "estado": "Activa",
+      "parametros": {
+        "horas": 8.0
+      },
+      "costo": 6400.0,
+      "descuento": 1600.0
     }
   ]
 }
