@@ -16,7 +16,7 @@ from pathlib import Path
 import re
 from typing import Any, Callable, ClassVar
 
-# Clase abstracta representa entidades generales del sistema.
+# Clase abstracta usando decoradores, representa entidades generales del sistema.
 @dataclass
 class EntidadSistema(ABC):
     id: int
